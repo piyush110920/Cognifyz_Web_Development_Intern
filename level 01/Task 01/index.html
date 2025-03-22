@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            background: #007bff;
+            border-radius: 8px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .form input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .form button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form button:hover {
+            background: #218838;
+        }
+        .message {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const inputField = document.getElementById("userInput");
+            const message = document.getElementById("message");
+            if (inputField.value.trim() !== "") {
+                message.innerText = "Message Submitted: " + inputField.value;
+                inputField.value = "";
+            } else {
+                message.innerText = "Please enter a message before submitting.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Menu -->
+        <div class="section nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Heading, Paragraph, and Image -->
+        <div class="section">
+            <h1>Welcome to Our Website</h1>
+            <p>This is a simple yet elegant webpage designed with HTML and CSS.</p>
+            <img src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_01\TASK 01\img.png" alt="Sample Image" width="100%">
+        </div>
+
+        <!-- Form Section -->
+        <div class="section form">
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="userInput" placeholder="Enter something...">
+                <button type="submit">Submit</button>
+            </form>
+            <p id="message" class="message"></p>
+        </div>
+    </div>
+</body>
+</html>
