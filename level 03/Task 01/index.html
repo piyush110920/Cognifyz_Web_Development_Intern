@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery & Slideshow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="title">Image Gallery & Slideshow</h1>
+
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <img class="slide" src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\01.jpg">
+        <img class="slide" src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\02.jpg">
+        <img class="slide" src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\03.jpg">
+        <img class="slide" src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\04.jpg">
+    </div>
+
+    <!-- Image Gallery -->
+    <h2 class="subtitle">Image Gallery</h2>
+    <div class="gallery-container">
+        <div class="thumbnail">
+            <img src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\01.jpg" onclick="openImage(this)">
+        </div>
+        <div class="thumbnail">
+            <img src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\02.jpg" onclick="openImage(this)">
+        </div>
+        <div class="thumbnail">
+            <img src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\03.jpg" onclick="openImage(this)">
+        </div>
+        <div class="thumbnail">
+            <img src="C:\Users\cw\OneDrive\Desktop\cognifyz\COGNIFYZ_WD_03\TASK 01\04.jpg" onclick="openImage(this)">
+        </div>
+    </div>
+
+    <!-- Full-Screen Overlay -->
+    <div class="overlay" id="overlay" onclick="closeImage()">
+        <img id="overlay-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
